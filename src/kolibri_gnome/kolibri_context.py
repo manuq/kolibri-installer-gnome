@@ -317,10 +317,7 @@ class _KolibriSetupHelper(GObject.GObject):
             "language_id": language_id,
             "facility": {"name": "Kolibri at home"},
             "preset": "nonformal",
-            "superuser": {
-                "username": "admin",
-                "password": "admin",
-            },
+            "superuser": None,
             "device_name": "Kolibri at home",
             "settings": {},
             "allow_guest_access": "",
