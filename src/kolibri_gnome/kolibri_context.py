@@ -4,6 +4,7 @@ import re
 import typing
 import logging
 from pathlib import Path
+from gettext import gettext as _
 from urllib.parse import parse_qs
 from urllib.parse import SplitResult
 from urllib.parse import urlsplit
@@ -315,7 +316,7 @@ class _KolibriSetupHelper(GObject.GObject):
         language_id = self.__get_closest_system_kolibri_language()
         request_body_data = {
             "language_id": language_id,
-            "facility": {"name": "Kolibri at home"},
+            "facility": {"name": _("Kolibri at home")},
             "preset": "nonformal",
             "superuser": {
                 "username": "admin",
