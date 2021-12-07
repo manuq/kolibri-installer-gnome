@@ -303,8 +303,8 @@ class _KolibriSetupHelper(GObject.GObject):
             result_cb=self.__on_kolibri_api_facility_response,
         )
 
-    def __on_kolibri_api_facility_response(self, data: list):
-        if len(data):
+    def __on_kolibri_api_facility_response(self, data: typing.Any):
+        if isinstance(data, list) and data:
             self.props.is_facility_ready = True
             return
 
